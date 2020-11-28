@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {vehicle} from 'src/app/vehicle/vehicle';
-import { NGXLogger } from 'ngx-logger';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @Component({
   selector: 'app-vehicle',
@@ -25,6 +26,8 @@ export class VehicleComponent implements OnInit {
   makes =['Mazda']
 
   model = new vehicle( this.years[0], this.makes[0],this.models[0]);
+
+  model1 ={km:'10,000'}
 
   submitted = false;
 

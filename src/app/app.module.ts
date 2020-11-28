@@ -8,6 +8,11 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { DriverComponent } from './driver/driver.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PremiumComponent } from './premium/premium.component';
+import { CoveragesComponent } from './coverages/coverages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MaterialModule } from './material-module';
 
 @NgModule({
   imports: [
@@ -19,13 +24,18 @@ import { PremiumComponent } from './premium/premium.component';
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR,
       disableConsoleLogging: false
-    })
-  ],
+    }),
+    BrowserAnimationsModule,
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MaterialModule
+      ],
   declarations: [
     AppComponent,
     VehicleComponent,
     DriverComponent,
-    PremiumComponent
+    PremiumComponent,
+    CoveragesComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
