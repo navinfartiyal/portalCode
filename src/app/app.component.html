@@ -2,7 +2,7 @@
 <!-- <app-coverages></app-coverages> -->
 
 <!-- <a routerLink="/driver" class="btn btn-success">Driver Screen Click Here</a> -->
-<a routerLink="/vehicle" class="btn btn-primary">Vehicle Screen Click Here</a>
+<!-- <a routerLink="/vehicle" class="btn btn-primary">Vehicle Screen Click Here</a> -->
 
 <!-- main app container -->
 <div>
@@ -15,3 +15,41 @@
         </div>
     </div>
 </div>
+
+<ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
+  
+    <ng-wizard-step [title]="'Vehicles'" [description]="'Enter Vehicle Deatils'"
+      [canEnter]="isValidTypeBoolean" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+      <!-- <span>Step 1 content</span> -->
+       <app-vehicle></app-vehicle> 
+        
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Driver'" [description]="'Enter Driver Details'" [state]="">
+      <!-- <span>Step 2 content</span> -->
+      <span><app-driver></app-driver> </span>
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Coverages'" [description]="'Select Coverages'"
+      [canEnter]="isValidFunctionReturnsObservable.bind(this)" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+      <!-- <span>Step 3 content</span> -->
+      <app-coverages></app-coverages>
+    </ng-wizard-step>
+   
+  <ng-wizard-step [title]="'Quote'" [description]="'Quote Details'">
+      <!-- <span>Step 4 content</span> -->
+      <app-premium></app-premium>
+    </ng-wizard-step>
+   
+    <!-- <ng-wizard-step [title]="'Step 5'" [description]="'Step 5 description'" [state]="stepStates.hidden">
+      <span>Step 5 content</span>
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Step 6'" [description]="'Step 6 description'" [state]="stepStates.error">
+      <span>Step 6 content</span>
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Step 7'" [description]="'Step 7 description'">
+      <span>Step 7 content</span>
+    </ng-wizard-step> -->
+  </ng-wizard>

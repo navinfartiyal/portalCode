@@ -13,6 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MaterialModule } from './material-module';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+
+
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.dots
+};
 
 @NgModule({
   imports: [
@@ -28,7 +34,8 @@ import { MaterialModule } from './material-module';
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatDatepickerModule,
-    MaterialModule
+    MaterialModule,
+    NgWizardModule.forRoot(ngWizardConfig)
       ],
   declarations: [
     AppComponent,

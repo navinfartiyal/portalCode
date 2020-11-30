@@ -1,3 +1,12 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+/* Mandatory */
+/* @import '~ng-wizard/themes/ng_wizard.min.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+ 
+Optional */
+/* If a theme other than default is used, the css file for that theme is required. */
+/* @import '~ng-wizard/themes/ng_wizard_theme_arrows.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_circles.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_dots.min.css'; */
 
 
