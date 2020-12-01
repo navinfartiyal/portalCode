@@ -4,12 +4,14 @@ import { DriverComponent } from './driver/driver.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { PremiumComponent } from './premium/premium.component';
 import { CoveragesComponent } from './coverages/coverages.component';
+import { MyinsuranceComponent } from './myinsurance/myinsurance.component';
 
 const routes: Routes = [
   { path: 'driver', component: DriverComponent },
   { path: 'vehicle', component: VehicleComponent },
   { path: 'premium', component: PremiumComponent },
-  { path: 'coverages', component: CoveragesComponent }
+  { path: 'coverages', component: CoveragesComponent },
+  { path: 'myinsurance', component: MyinsuranceComponent }
 ];
 
 @NgModule({

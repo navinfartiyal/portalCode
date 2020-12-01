@@ -1,0 +1,107 @@
+<div>
+
+    <mat-card>
+        <h2 class="textcolorblue">My Home Policies </h2>
+
+
+
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title class="textcolorblue">
+                    <mat-icon aria-hidden="false" aria-label="directions_car">home</mat-icon> &nbsp; <b>Policy
+                        Number </b> - H3870987 818 MAIN ST ,CHESTERVILLE ,ON, K7G5C5
+                </mat-panel-title>
+                <!-- <mat-icon aria-hidden="false" aria-label="directions_car">directions_car</mat-icon> -->
+            </mat-expansion-panel-header>
+
+
+<!-- 
+            </mat-expansion-panel-header> -->
+
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="textcolorblue">
+                       Property Details </mat-panel-title>
+                        <mat-icon aria-hidden="false" aria-label="directions_car">home</mat-icon>
+                </mat-expansion-panel-header>
+
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z10;"
+                    style="width: -webkit-fill-available; border-color:white">
+
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="ctyp">
+                        <th mat-header-cell *matHeaderCellDef>Type Of Coverage</th>
+                       <td mat-cell *matCellDef="let element"> {{element.ctyp}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="occupancy">
+                        <th mat-header-cell *matHeaderCellDef>Type Of Occupancy</th>
+                        <td mat-cell *matCellDef="let element"> {{element.occupancy}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="restype">
+                        <th mat-header-cell *matHeaderCellDef>Type Of Residence</th>
+                        <td mat-cell *matCellDef="let element"> {{element.restype}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </mat-expansion-panel>
+
+
+           
+
+
+
+
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="textcolorblue">
+                        Coverages </mat-panel-title>
+
+                        <mat-icon aria-hidden="false" aria-label="directions_car">list</mat-icon>
+                </mat-expansion-panel-header>
+                <table mat-table [dataSource]="dataSource1" class="mat-elevation-z10;"
+                    style="width: -webkit-fill-available; border-color:white">
+
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="cov">
+                        <th mat-header-cell *matHeaderCellDef>Coverage</th>
+                        <td mat-cell *matCellDef="let element"> {{element.cov}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="lim">
+                        <th mat-header-cell *matHeaderCellDef>Limit</th>
+                        <td mat-cell *matCellDef="let element"> {{element.lim}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="ded">
+                        <th mat-header-cell *matHeaderCellDef>Deductible</th>
+                        <td mat-cell *matCellDef="let element"> {{element.ded}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                </table>
+
+            </mat-expansion-panel>
+
+        </mat-expansion-panel>
+
+        <!-- //vehicle 2 -->
+
+        
+
+
+    </mat-card>
+</div>

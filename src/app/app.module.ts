@@ -14,6 +14,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MaterialModule } from './material-module';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+import { MyinsuranceComponent } from './myinsurance/myinsurance.component';
+import { MyautopolicyComponent } from './myautopolicy/myautopolicy.component';
+import { MyhomepolicyComponent } from './myhomepolicy/myhomepolicy.component';
 
 
 const ngWizardConfig: NgWizardConfig = {
@@ -42,7 +45,10 @@ const ngWizardConfig: NgWizardConfig = {
     VehicleComponent,
     DriverComponent,
     PremiumComponent,
-    CoveragesComponent
+    CoveragesComponent,
+    MyinsuranceComponent,
+    MyautopolicyComponent,
+    MyhomepolicyComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
